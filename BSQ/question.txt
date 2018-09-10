@@ -1,0 +1,2 @@
+1. Check fd in map on valid descriptor
+2. Don't forget close file
