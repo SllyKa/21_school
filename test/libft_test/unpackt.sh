@@ -3,4 +3,5 @@
 mkdir ../../../testSllyka
 tar -xf *.tar -C ../../../testSllyka
 cd ../../../testSllyka
-rm -rf ../../21school
+sh ./start.sh
+rm -rf ../../../21school
