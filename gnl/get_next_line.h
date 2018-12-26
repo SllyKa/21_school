@@ -13,13 +13,19 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFF_SIZE 1  // -23 0 ?
-# define INTERMEDIATE_SIZE 700
+# define BUFF_SIZE 700
 # define CHECK_ERR(x) if (!(x)) return (-1)
 # define CHECK_CMP_ERR(x) if ((x)) return (-1)
 # define IF_RET_ONE(x) if ((x)) return (1)
 # define FREE_X(x) if ((x)){free((x)); (x) = NULL;}
+# define START_INIT(x,y,z) CHECK_CMP_ERR(x<0);CHECK_ERR(y);*line=NULL;z=0;
 
-int         get_next_line(const int fd, char **line);
+typedef struct			s_info
+{
+	int			fd;
+	char		*line;
+}						t_info;
+
+int						get_next_line(const int fd, char **line);
 
 #endif
